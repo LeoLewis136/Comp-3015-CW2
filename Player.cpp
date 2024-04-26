@@ -9,13 +9,33 @@ Player::Player() {
 
 }
 
-void Player::update() {
+void Player::update(float delta) {
+	if (rotationInput.x == 0.0f && rotationInput.y == 0.0f && rotationInput.z == 0.0f) {
+		angularVelocity *= exp(-rotationalDamping * delta);
+	}
+	if (movementInput == 0.0f) {
+		linearVelocity *= exp(-linearDamping * delta);
+	}
+
+	linearVelocity = clamp(linearVelocity + (movementInput * (movementAccel * delta)), -maxLinSpeed, maxLinSpeed);
+	angularVelocity = clamp(angularVelocity + (rotationInput * (rotationAccel * delta)), -maxRotSpeed, maxRotSpeed);
+
+	moveLocal(linearVelocity, vec3(0.0f, 0.0f, 1.0f));
+
+	rotateLocal(angularVelocity.x, vec3(1.0f, 0.0f, 0.0f));
+	rotateLocal(angularVelocity.y, vec3(0.0f, 1.0f, 0.0f));
+	rotateLocal(angularVelocity.z, vec3(0.0f, 0.0f, 1.0f));
 
 }
 
 void Player::render(GLSLProgram& shader) {
 	
 	playerObject->render();
+}
+
+void Player::assignInputs(vec3 rotation, int movement) {
+	rotationInput = rotation;
+	movementInput = movement;
 }
 
 void Player::moveLocal(float motion, vec3 direction) {

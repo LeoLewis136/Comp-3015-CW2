@@ -17,26 +17,35 @@ uniform int Pass; // The current rendering pass
 uniform float BloomThreshold;
 uniform float BloomIntensity;
 
+uniform mat4 ModelIn;
+
+uniform vec3 LightDir;
+uniform float LightIntensity;
+
 layout (location = 0) out vec4 FragColor;
+
+float gamma = 2.2f;
 
 bool getBrightArea(){
     vec4 colour = texture(RenderTex, TexCoord);
-    float luminence = (colour.r + colour.g + colour.b) / 3.0;
+    float luminence = (colour.r * 0.2126 + colour.g * 0.7152 + colour.b * 0.0722);
 
     return luminence > BloomThreshold;
 
 }
 
 vec4 pass1(){
-    
-    return texture(albedoTexture, TexCoord); 
+    float diffuse = dot(Normal, vec3((vec4(LightDir, 0.0f) * ModelIn)));
+    float scaledDiffuse = pow(max(0.0f, diffuse), 2.0f);
+
+    return pow(texture(albedoTexture, TexCoord), vec4(1.0f / gamma)) * scaledDiffuse * LightIntensity; 
 
 }
 
-// Calculates the areas that require bloom
+// Calculates the areas that require bloom 
 vec4 pass2(){
     if (getBrightArea()){
-        return vec4(1.0f);
+        return texture(RenderTex, TexCoord);
     }
 
     return vec4(0.0f);

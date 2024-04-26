@@ -75,6 +75,9 @@
     <ClCompile Include="Player.cpp">
       <Filter>custom</Filter>
     </ClCompile>
+    <ClCompile Include="Projectile.cpp">
+      <Filter>custom</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="shader\basic_uniform.frag">
@@ -146,6 +149,9 @@
       <Filter>helper</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
+      <Filter>custom</Filter>
+    </ClInclude>
+    <ClInclude Include="Projectile.h">
       <Filter>custom</Filter>
     </ClInclude>
   </ItemGroup>

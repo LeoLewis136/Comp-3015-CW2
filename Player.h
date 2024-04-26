@@ -17,11 +17,13 @@ class Player {
 public:
 	Player();
 
-	void update();
+	void update(float delta);
 	void render(GLSLProgram& shader);
 
 	void moveLocal(float mot, vec3 motion);
 	void rotateLocal(float angle, vec3 axis);
+
+	void assignInputs(vec3 rotation, int movement);
 
 	vec3 getForward();
 	vec3 getUp();
@@ -36,6 +38,23 @@ public:
 	vec3 getCameraPosition(vec3 offset);
 
 private:
+	// Variables to define movmenent stats
+	float movementAccel = 0.5;
+	float rotationAccel = 3;
+
+	float rotationalDamping = 2.0; // The rotational drag effect
+	float linearDamping = 0.8; // The linear drag effect
+
+	float maxRotSpeed = 4; // The highest speed that the object can rotate
+	float maxLinSpeed = 0.4; // The highest speed that the object can move forwards and backwards
+
+	vec3 rotationInput = vec3(0.0f, 0.0f, 0.0f); // Stores what inputs were made for rotation in this frame
+	int movementInput = 0; // Stores what input was made to move the object
+
+	vec3 angularVelocity = vec3(0.0f, 0.0f, 0.0f);
+	float linearVelocity = 0.0f; // Stores the current velocity forward to back
+
+
 	vec3 position = vec3(0.0f, 0.0f, 0.0f);
 	//vec3 rotation = vec3(0.0f, 0.0f, 90.0f);
 	mat4 orientation = mat4(1.0f); // The objects orientation (rotation) in the 3D space. Makes rotation calculations easier.

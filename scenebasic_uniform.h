@@ -18,6 +18,7 @@
 #include <GLFW/glfw3.h>
 
 #include "Player.h"
+#include "Projectile.h"
 
 using namespace glm;
 
@@ -31,10 +32,6 @@ private:
     float yaw = 0.0f;
     float pitch = 0.0f;
     bool mouseEntered = false;
-    
-    // Scene Lights
-    vec3 light0Position = vec3(28.0f, 2.5f, 1.0f);
-    vec3 light1Position = vec3(28.0f, 2.5f, 1.0f);
 
     vec2 lastMousePos = vec2(0.0f);
 
@@ -53,8 +50,11 @@ private:
 
     // -- Objects --
     Player playerObject;
+    Projectile tempProjectile = Projectile(vec3(0.0f, 0.0f, 0.0f));
 
     std::unique_ptr<ObjMesh> tempTesting;
+
+    float tempAngle = 0.0f;
 
 
     GLuint lightTex, renderTex, verticalTex, horizontalTex, fsQuad, lightFBO, verticalFBO, horizontalFBO, renderFBO; // Multi-Pass rendering GLuints
@@ -85,7 +85,6 @@ private:
 public:
     SceneBasic_Uniform();
 
-    void moveCamera(float t);
     void manageInput(GLFWwindow* myWindow);
     void MouseCallback(GLFWwindow* window, double xpos, double ypos);
 

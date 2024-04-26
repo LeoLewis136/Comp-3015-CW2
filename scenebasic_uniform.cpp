@@ -33,6 +33,8 @@ float SceneBasic_Uniform::gauss(float x, float sigma2) {
 
 void SceneBasic_Uniform::initScene()
 {
+	srand(time(NULL));
+
 	compile();
 
 	model = mat4(1.0f);
@@ -43,8 +45,10 @@ void SceneBasic_Uniform::initScene()
 
 	standardShaders.use();
 
-	standardShaders.setUniform("BloomThreshold", 0.8f); 
+	standardShaders.setUniform("BloomThreshold", 0.6f); 
 	standardShaders.setUniform("BloomIntensity", 1.0f);
+
+	standardShaders.setUniform("LightIntensity", 3.0f);
 
 
 	// Gaussian weight setup
@@ -70,11 +74,11 @@ void SceneBasic_Uniform::initScene()
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f); 
 
 	// -- Load Textures -- 
-	skyboxTexture = Texture::loadCubeMap("media/texture/Skybox/vz_sinister", ".png"); 
+	skyboxTexture = Texture::loadCubeMap("media/texture/Skybox1/sky", ".png"); 
 	plainTexture = Texture::loadTexture("media/texture/MainTexture.png");
 
 	// -- Load Objects --
-	tempTesting = ObjMesh::load("media/Ship.obj", true);
+	tempTesting = ObjMesh::load("media/Asteroid.obj", true);
 
 	setupFBO();
 
@@ -257,8 +261,10 @@ void SceneBasic_Uniform::update( float t )
 	float delta = t - lastFrame;
 	lastFrame = t;
 
-	vec3 tempPos = vec3(sinf(glfwGetTime()) * 60, 30.0f, cosf(glfwGetTime()) * 60); // Animating light position
-	light1Position = tempPos;
+	tempAngle += 1 * delta;
+	playerObject.update(delta);
+
+	tempProjectile.update(delta);
 
 }
 
@@ -290,6 +296,7 @@ void SceneBasic_Uniform::pass1() {
 	 
 	standardShaders.use();
 	standardShaders.setUniform("Pass", 1); // Define which render pass is being used
+	standardShaders.setUniform("LightDir", -playerObject.getCamForward());
 
 	positionModel(playerObject.getPosition());
 	rotateModel(playerObject.getOrientation());
@@ -302,8 +309,13 @@ void SceneBasic_Uniform::pass1() {
 	playerObject.render(standardShaders);
 	
 	positionModel(vec3(0.0f));
+	rotateModel(tempAngle, vec3(0.0f, 1.0f, 0.0f));
 	setMatricies(standardShaders);
 	tempTesting->render();
+
+	positionModel(tempProjectile.position);
+	setMatricies(standardShaders);
+	tempProjectile.render();
 	
 }
 
@@ -402,26 +414,34 @@ void SceneBasic_Uniform::render()
 }
 
 void SceneBasic_Uniform::manageInput(GLFWwindow* myWindow) {
-	if (glfwGetKey(myWindow, GLFW_KEY_W) == GLFW_PRESS) {
-		playerObject.moveLocal(1, vec3(0.0f, 0.0f, 1.0f)); }
-	if (glfwGetKey(myWindow, GLFW_KEY_S) == GLFW_PRESS) {
-		playerObject.moveLocal(-1, vec3(0.0f, 0.0f, 1.0f)); }
-
-	if (glfwGetKey(myWindow, GLFW_KEY_LEFT) == GLFW_PRESS) {
-		playerObject.rotateLocal(5, vec3(0.0f, 1.0f, 0.0f)); }
-	if (glfwGetKey(myWindow, GLFW_KEY_RIGHT) == GLFW_PRESS) {
-		playerObject.rotateLocal(-5, vec3(0.0f, 1.0f, 0.0f)); }
+	int movement = 0;
+	vec3 rotation = vec3(0.0f, 0.0f, 0.0f);
 
 	if (glfwGetKey(myWindow, GLFW_KEY_UP) == GLFW_PRESS) {
-		playerObject.rotateLocal(5, vec3(1.0f, 0.0f, 0.0f)); }
-	if (glfwGetKey(myWindow, GLFW_KEY_DOWN) == GLFW_PRESS) {
-		playerObject.rotateLocal(-5, vec3(1.0f, 0.0f, 0.0f)); }
-
-	if (glfwGetKey(myWindow, GLFW_KEY_Q) == GLFW_PRESS) {
-		playerObject.rotateLocal(5, vec3(0.0f, 0.0f, 1.0f)); }
-	if (glfwGetKey(myWindow, GLFW_KEY_E) == GLFW_PRESS) {
-		playerObject.rotateLocal(-5, vec3(0.0f, 0.0f, 1.0f));
+		movement = 1; }
+	else if (glfwGetKey(myWindow, GLFW_KEY_DOWN) == GLFW_PRESS) {
+		movement = -1; }
+	else {
+		movement = 0;
 	}
+
+	if (glfwGetKey(myWindow, GLFW_KEY_LEFT) == GLFW_PRESS) {
+		rotation.y = 1; }
+	if (glfwGetKey(myWindow, GLFW_KEY_RIGHT) == GLFW_PRESS) {
+		rotation.y = -1; }
+
+	if (glfwGetKey(myWindow, GLFW_KEY_W) == GLFW_PRESS) {
+		rotation.x = -1; }
+	if (glfwGetKey(myWindow, GLFW_KEY_S) == GLFW_PRESS) {
+		rotation.x = 1; }
+
+	if (glfwGetKey(myWindow, GLFW_KEY_A) == GLFW_PRESS) {
+		rotation.z = -1; }
+	if (glfwGetKey(myWindow, GLFW_KEY_D) == GLFW_PRESS) {
+		rotation.z = 1;
+	}
+
+	playerObject.assignInputs(rotation, movement);
 
 }
 
@@ -480,7 +500,7 @@ void SceneBasic_Uniform::positionModel(vec3 newPosition) {
 }
 
 void SceneBasic_Uniform::rotateModel(float rotation, vec3 axis) { 
-	model = rotate(model, rotation, axis);
+	model = rotate(model, radians(rotation), axis);
 }
 
 void SceneBasic_Uniform::rotateModel(mat4 orientation) {
@@ -502,7 +522,7 @@ void SceneBasic_Uniform::resize(int w, int h)
 	height = h;
 	
 
-	projection = glm::perspective(glm::radians(70.0f), (float)w / h, 0.3f, 200.0f);
+	projection = glm::perspective(glm::radians(90.0f), (float)w / h, 0.3f, 200.0f);
 }
 
 
