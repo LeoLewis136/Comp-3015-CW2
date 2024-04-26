@@ -1,0 +1,8 @@
+﻿  Player.cpp
+  main.cpp
+  scenebasic_uniform.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\scenebasic_uniform.cpp(260,38): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\scenebasic_uniform.cpp(260,71): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+glfw3.lib(input.obj) : warning LNK4099: PDB '' was not found with 'glfw3.lib(input.obj)' or at ''; linking object as if no debug info
+  Project_Template.vcxproj -> C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\x64\Debug\Project_Template.exe

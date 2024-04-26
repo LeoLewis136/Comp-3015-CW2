@@ -16,7 +16,7 @@ layout (location = 0) out vec4 FragColor;
 float fogCalculation(){
     float dist = length(ViewPos - Position);
     float fogFactor = (Fog.MaxDist - dist) / (Fog.MaxDist - Fog.MinDist);
-    return clamp(fogFactor, 0.3f, 1.0f);
+    return 1.0f;
 }
 
 void main(){

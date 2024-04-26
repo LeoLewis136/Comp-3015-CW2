@@ -60,23 +60,20 @@
     <ClCompile Include="helper\stb_image.cpp">
       <Filter>helper\stb</Filter>
     </ClCompile>
-    <ClCompile Include="helper\ShaderManager.cpp">
-      <Filter>custom</Filter>
-    </ClCompile>
     <ClCompile Include="helper\skybox.cpp">
       <Filter>helper</Filter>
     </ClCompile>
     <ClCompile Include="helper\cube.cpp">
       <Filter>helper</Filter>
     </ClCompile>
-    <ClCompile Include="Camera.cpp">
-      <Filter>custom</Filter>
-    </ClCompile>
     <ClCompile Include="helper\sphere.cpp">
       <Filter>helper</Filter>
     </ClCompile>
     <ClCompile Include="helper\plane.cpp">
       <Filter>helper</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>custom</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -130,9 +127,6 @@
     <ClInclude Include="helper\texture.h">
       <Filter>helper</Filter>
     </ClInclude>
-    <ClInclude Include="helper\ShaderManager.h">
-      <Filter>custom</Filter>
-    </ClInclude>
     <ClInclude Include="helper\skybox.h">
       <Filter>helper</Filter>
     </ClInclude>
@@ -142,9 +136,6 @@
     <ClInclude Include="helper\cube.h">
       <Filter>helper</Filter>
     </ClInclude>
-    <ClInclude Include="Camera.h">
-      <Filter>custom</Filter>
-    </ClInclude>
     <ClInclude Include="helper\random.h">
       <Filter>helper</Filter>
     </ClInclude>
@@ -153,6 +144,9 @@
     </ClInclude>
     <ClInclude Include="helper\plane.h">
       <Filter>helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>custom</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

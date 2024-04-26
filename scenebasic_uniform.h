@@ -9,7 +9,6 @@
 #include "helper/objmesh.h" // Model loader
 
 #include <glm/glm.hpp>
-#include "helper/ShaderManager.h"
 
 #include <glad/glad.h>
 #include "helper/glslprogram.h"
@@ -17,6 +16,8 @@
 #include "helper/skybox.h"
 #include "helper/plane.h"
 #include <GLFW/glfw3.h>
+
+#include "Player.h"
 
 using namespace glm;
 
@@ -45,39 +46,29 @@ private:
 
     SkyBox sky;
     Plane water;
-    
-    std::unique_ptr<ObjMesh> terrain;
-    std::unique_ptr<ObjMesh> dock;
-    std::unique_ptr<ObjMesh> lantern;
 
-    std::vector<std::unique_ptr<ObjMesh>> trees;
-    std::vector<vec4> treePositions;
+    // -- Textures -- 
+    GLuint skyboxTexture; // Skybox
+    GLuint plainTexture; // Player Texture
 
-    // Textures
-    GLuint woodTexture;
-    GLuint woodNormal;
-    GLuint blankNormal;
+    // -- Objects --
+    Player playerObject;
 
-    GLuint lanternTexture;
+    std::unique_ptr<ObjMesh> tempTesting;
 
-    GLuint skyboxTexture;
-    GLuint treeTexture;
-    GLuint terrainTexture;
-    GLuint flowerTexture;
-    GLuint blankMix;
-    GLuint waterTexture;
 
-    GLuint renderTex, intermediateTex, fsQuad, intermediateFBO, renderFBO; // Multi-Pass rendering GLuints
+    GLuint lightTex, renderTex, verticalTex, horizontalTex, fsQuad, lightFBO, verticalFBO, horizontalFBO, renderFBO; // Multi-Pass rendering GLuints
 
     void setMatricies(GLSLProgram& currentShaders);
 
     void compile();
     void assignCubemap(GLuint albedo);
-    void assignTexture(GLuint albedo, GLuint normal, GLuint albedo2);
+    void assignTexture(GLuint albedo);
     void assignMaterial(float shininess);
 
     void positionModel(glm::vec3 newPosition);
     void rotateModel(float rotation, vec3 axis);
+    void rotateModel(mat4 orientation);
     void setScale(float scale);
 
     // Multi-Pass rendering
@@ -85,6 +76,8 @@ private:
     void pass1();
     void pass2();
     void pass3();
+    void pass4();
+    void pass5();
 
     float gauss(float x, float y);
 
