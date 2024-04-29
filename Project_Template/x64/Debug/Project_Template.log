@@ -1,2 +1,16 @@
-﻿  Projectile.cpp
+﻿  scenebasic_uniform.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\Player.h(18,15): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'scenebasic_uniform.cpp')
+  
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\Player.h(52,24): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'scenebasic_uniform.cpp')
+  
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\Bullet.h(24,15): warning C4305: 'initializing': truncation from 'double' to 'float'
+  (compiling source file 'scenebasic_uniform.cpp')
+  
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\scenebasic_uniform.cpp(43,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\scenebasic_uniform.cpp(312,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\scenebasic_uniform.cpp(337,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\scenebasic_uniform.cpp(340,13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\scenebasic_uniform.cpp(419,20): warning C4018: '<': signed/unsigned mismatch
   Project_Template.vcxproj -> C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\x64\Debug\Project_Template.exe

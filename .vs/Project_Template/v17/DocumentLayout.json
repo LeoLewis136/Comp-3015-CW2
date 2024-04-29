@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:Projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\scenebasic_uniform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:scenebasic_uniform.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -15,24 +11,32 @@
       "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\scenebasic_uniform.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:scenebasic_uniform.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:Projectile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:Projectile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\scenebasic_uniform.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:scenebasic_uniform.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Bullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:Bullet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\helper\\scenerunner.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:helper\\scenerunner.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Bullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2424A6AC-480B-441A-94EA-86C5C10C6ABF}|Project_Template.vcxproj|solutionrelative:Bullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,11 +46,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Bullet.h",
+              "DocumentMoniker": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Bullet.h",
+              "RelativeDocumentMoniker": "Bullet.h",
+              "ToolTip": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Bullet.h",
+              "RelativeToolTip": "Bullet.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-04-27T01:01:52.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Bullet.cpp",
+              "DocumentMoniker": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Bullet.cpp",
+              "RelativeDocumentMoniker": "Bullet.cpp",
+              "ToolTip": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Bullet.cpp",
+              "RelativeToolTip": "Bullet.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAABSAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-27T01:01:44.996Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -56,98 +86,85 @@
               "RelativeDocumentMoniker": "Projectile.h",
               "ToolTip": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Projectile.h",
               "RelativeToolTip": "Projectile.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-26T19:45:33.265Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Projectile.cpp",
               "DocumentMoniker": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Projectile.cpp",
               "RelativeDocumentMoniker": "Projectile.cpp",
               "ToolTip": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Projectile.cpp",
               "RelativeToolTip": "Projectile.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAeAAAA",
+              "ViewState": "AQIAAC0AAAAAAAAAAADwv0wAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-26T19:45:26.1Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-26T19:08:52.742Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "scenerunner.h",
-              "DocumentMoniker": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\helper\\scenerunner.h",
-              "RelativeDocumentMoniker": "helper\\scenerunner.h",
-              "ToolTip": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\helper\\scenerunner.h",
-              "RelativeToolTip": "helper\\scenerunner.h",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAAAAgAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-26T19:08:22.932Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Player.h",
               "RelativeDocumentMoniker": "Player.h",
               "ToolTip": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Player.h",
               "RelativeToolTip": "Player.h",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACkAAAAaAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAAACkAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-25T18:31:05.532Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Player.cpp",
               "RelativeDocumentMoniker": "Player.cpp",
               "ToolTip": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\Player.cpp",
               "RelativeToolTip": "Player.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAARAAAA",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAABgAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-25T18:30:54.011Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "scenebasic_uniform.cpp",
               "DocumentMoniker": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\scenebasic_uniform.cpp",
               "RelativeDocumentMoniker": "scenebasic_uniform.cpp",
               "ToolTip": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\scenebasic_uniform.cpp",
               "RelativeToolTip": "scenebasic_uniform.cpp",
-              "ViewState": "AQIAAL0BAAAAAAAAAAAAAAwCAABKAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADYAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-24T15:48:19.994Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "scenebasic_uniform.h",
               "DocumentMoniker": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\scenebasic_uniform.h",
               "RelativeDocumentMoniker": "scenebasic_uniform.h",
               "ToolTip": "C:\\Users\\Leo\\Documents\\UNI work\\Comp3015\\Comp-3015-CW2\\scenebasic_uniform.h",
               "RelativeToolTip": "scenebasic_uniform.h",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAADQAAABCAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAADwAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-24T15:46:43.977Z",
               "EditorCaption": ""

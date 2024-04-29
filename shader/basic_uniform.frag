@@ -36,9 +36,11 @@ bool getBrightArea(){
 
 vec4 pass1(){
     float diffuse = dot(Normal, vec3((vec4(LightDir, 0.0f) * ModelIn)));
-    float scaledDiffuse = pow(max(0.0f, diffuse), 2.0f);
+    // float scaledDiffuse = pow(max(0.0f, diffuse), 2.0f);
 
-    return pow(texture(albedoTexture, TexCoord), vec4(1.0f / gamma)) * scaledDiffuse * LightIntensity; 
+    // return pow(texture(albedoTexture, TexCoord), vec4(1.0f / gamma)) * scaledDiffuse * LightIntensity; 
+
+    return texture(albedoTexture, TexCoord) * clamp(diffuse, 0.1, 1.0);
 
 }
 

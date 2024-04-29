@@ -20,11 +20,11 @@ void Player::update(float delta) {
 	linearVelocity = clamp(linearVelocity + (movementInput * (movementAccel * delta)), -maxLinSpeed, maxLinSpeed);
 	angularVelocity = clamp(angularVelocity + (rotationInput * (rotationAccel * delta)), -maxRotSpeed, maxRotSpeed);
 
-	moveLocal(linearVelocity, vec3(0.0f, 0.0f, 1.0f));
+	moveLocal(linearVelocity * delta, vec3(0.0f, 0.0f, 1.0f));
 
-	rotateLocal(angularVelocity.x, vec3(1.0f, 0.0f, 0.0f));
-	rotateLocal(angularVelocity.y, vec3(0.0f, 1.0f, 0.0f));
-	rotateLocal(angularVelocity.z, vec3(0.0f, 0.0f, 1.0f));
+	rotateLocal(angularVelocity.x * delta, vec3(1.0f, 0.0f, 0.0f));
+	rotateLocal(angularVelocity.y * delta, vec3(0.0f, 1.0f, 0.0f));
+	rotateLocal(angularVelocity.z * delta, vec3(0.0f, 0.0f, 1.0f));
 
 }
 

@@ -1,0 +1,61 @@
+﻿  Bullet.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\Bullet.h(2,10): error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  (compiling source file 'Bullet.cpp')
+  
+  cube.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\helper\trianglemesh.h(5,10): error C1083: Cannot open include file: 'glad/glad.h': No such file or directory
+  (compiling source file 'helper/cube.cpp')
+  
+  glslprogram.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\helper\glslprogram.h(7,10): error C1083: Cannot open include file: 'glad/glad.h': No such file or directory
+  (compiling source file 'helper/glslprogram.cpp')
+  
+  glutils.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\helper\glutils.h(3,10): error C1083: Cannot open include file: 'glad/glad.h': No such file or directory
+  (compiling source file 'helper/glutils.cpp')
+  
+  objmesh.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\helper\trianglemesh.h(5,10): error C1083: Cannot open include file: 'glad/glad.h': No such file or directory
+  (compiling source file 'helper/objmesh.cpp')
+  
+  plane.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\helper\trianglemesh.h(5,10): error C1083: Cannot open include file: 'glad/glad.h': No such file or directory
+  (compiling source file 'helper/plane.cpp')
+  
+  skybox.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\helper\trianglemesh.h(5,10): error C1083: Cannot open include file: 'glad/glad.h': No such file or directory
+  (compiling source file 'helper/skybox.cpp')
+  
+  sphere.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\helper\trianglemesh.h(5,10): error C1083: Cannot open include file: 'glad/glad.h': No such file or directory
+  (compiling source file 'helper/sphere.cpp')
+  
+  stb_image.cpp
+  texture.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\helper\texture.h(2,10): error C1083: Cannot open include file: 'glad/glad.h': No such file or directory
+  (compiling source file 'helper/texture.cpp')
+  
+  torus.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\helper\trianglemesh.h(5,10): error C1083: Cannot open include file: 'glad/glad.h': No such file or directory
+  (compiling source file 'helper/torus.cpp')
+  
+  trianglemesh.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\helper\trianglemesh.h(5,10): error C1083: Cannot open include file: 'glad/glad.h': No such file or directory
+  (compiling source file 'helper/trianglemesh.cpp')
+  
+  main.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\helper\scene.h(3,10): error C1083: Cannot open include file: 'glad/glad.h': No such file or directory
+  (compiling source file 'main.cpp')
+  
+  Player.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\Player.h(2,10): error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  (compiling source file 'Player.cpp')
+  
+  Projectile.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\Projectile.h(2,10): error C1083: Cannot open include file: 'glm/glm.hpp': No such file or directory
+  (compiling source file 'Projectile.cpp')
+  
+  scenebasic_uniform.cpp
+C:\Users\Leo\Documents\UNI work\Comp3015\Comp-3015-CW2\helper\trianglemesh.h(5,10): error C1083: Cannot open include file: 'glad/glad.h': No such file or directory
+  (compiling source file 'scenebasic_uniform.cpp')
+  

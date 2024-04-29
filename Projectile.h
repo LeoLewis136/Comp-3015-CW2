@@ -17,10 +17,15 @@ private:
 public:
 	Projectile(vec3 playerPos);
 
-	void update(float delta);
+	bool update(float delta, vec3 playerPos);
 	void render();
 
 	float size = 1.0f;
 	vec3 position = vec3(0.0f);
+	mat4 orientation = mat4(1.0f); // Objects "Rotation"
+
+	vec3 rotationAxis = vec3(0.0f);
+	float rotationSpeed = 0.0f;
+
 	vec3 movementDir = vec3(0.0f);
 };

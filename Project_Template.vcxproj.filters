@@ -78,6 +78,12 @@
     <ClCompile Include="Projectile.cpp">
       <Filter>custom</Filter>
     </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>custom</Filter>
+    </ClCompile>
+    <ClCompile Include="helper\grid.cpp">
+      <Filter>helper</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="shader\basic_uniform.frag">
@@ -90,6 +96,18 @@
       <Filter>shaders</Filter>
     </None>
     <None Include="shader\skybox.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shader\particle.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shader\particle.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shader\flat.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shader\flat.vert">
       <Filter>shaders</Filter>
     </None>
   </ItemGroup>
@@ -153,6 +171,15 @@
     </ClInclude>
     <ClInclude Include="Projectile.h">
       <Filter>custom</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>custom</Filter>
+    </ClInclude>
+    <ClInclude Include="helper\grid.h">
+      <Filter>helper</Filter>
+    </ClInclude>
+    <ClInclude Include="helper\particleutils.h">
+      <Filter>helper</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

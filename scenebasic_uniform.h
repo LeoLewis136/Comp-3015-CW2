@@ -7,6 +7,9 @@
 #include "helper/torus.h"
 #include "helper/scene.h"
 #include "helper/objmesh.h" // Model loader
+#include "helper/random.h"
+#include "helper/grid.h"
+#include "helper/particleutils.h"
 
 #include <glm/glm.hpp>
 
@@ -19,6 +22,8 @@
 
 #include "Player.h"
 #include "Projectile.h"
+#include "Bullet.h"
+
 
 using namespace glm;
 
@@ -33,6 +38,8 @@ private:
     float pitch = 0.0f;
     bool mouseEntered = false;
 
+    bool EKeyPressed = false;
+
     vec2 lastMousePos = vec2(0.0f);
 
     vec3 movementVec = vec3(0.0f); // The current movement vector
@@ -40,21 +47,38 @@ private:
 
     GLSLProgram standardShaders;
     GLSLProgram skyboxShaders;
+    GLSLProgram particleShaders;
+    GLSLProgram flatShaders;
 
     SkyBox sky;
     Plane water;
 
+    // -- Particles --
+    Random rand;
+    GLuint initVel, startTime, particles, nParticles;
+    Grid grid;
+    vec3 emitterPos, emitDir;
+    float particleLifetime, totalTime;
+
     // -- Textures -- 
     GLuint skyboxTexture; // Skybox
     GLuint plainTexture; // Player Texture
+    GLuint playerTexture; // Player Object Texture
+
+    GLuint particleTexture; // The texture to be used on particles
 
     // -- Objects --
     Player playerObject;
-    Projectile tempProjectile = Projectile(vec3(0.0f, 0.0f, 0.0f));
-
-    std::unique_ptr<ObjMesh> tempTesting;
+    std::vector<Projectile> projectileArray;
+    std::vector<Bullet> bulletArray;
 
     float tempAngle = 0.0f;
+    float debug_time = 0.0f;
+
+    int currentAsteroidNum = 10;
+    int asteroidsSpawned = 0;
+    int score = 0; // The player's current score
+    bool game_exit = false;
 
 
     GLuint lightTex, renderTex, verticalTex, horizontalTex, fsQuad, lightFBO, verticalFBO, horizontalFBO, renderFBO; // Multi-Pass rendering GLuints
@@ -70,6 +94,10 @@ private:
     void rotateModel(float rotation, vec3 axis);
     void rotateModel(mat4 orientation);
     void setScale(float scale);
+
+    // Particle Rendering
+    void initParticleBuffer();
+    float randFloat();
 
     // Multi-Pass rendering
     void setupFBO();
@@ -89,9 +117,11 @@ public:
     void MouseCallback(GLFWwindow* window, double xpos, double ypos);
 
     void initScene();
-    void update( float t );
+    void update(float t);
     void render();
     void resize(int, int);
+
+    void manageAsteroids();
 };
 
 #endif // SCENEBASIC_UNIFORM_H
